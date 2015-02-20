@@ -59,21 +59,4 @@ public class JsonUtil {
 		return list;
 	}
 	
-	public static Map<String, String> mapValueObjectToMapValueString(Map<String, Object> paramMap)
-	{
-		Map<String, String> retMap = new HashMap<String, String>();
-		Iterator<Entry<String, Object>> paramsItr = paramMap.entrySet().iterator();
-		for(Map.Entry<String, Object> entry : paramMap.entrySet())
-		{
-			retMap.put(entry.getKey(), (String)entry.getValue());
-		}
-		return retMap;
-	}
-	
-	public static JSONArray parseJsonArray(String string) throws JSONException
-	{
-		JSONTokener tokener = new JSONTokener(string);
-		JSONArray retArray = new JSONArray(tokener);
-		return retArray;
-	}
 }
